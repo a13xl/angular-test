@@ -7,5 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   name = 'Angular';
-  array = ['JS', 'Angular', 'Python'];
+  categories = ['JS', 'Angular', 'Python'];
+
+  disable(name: string) {
+    console.log(name);
+  }
 }

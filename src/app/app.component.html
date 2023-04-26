@@ -1,4 +1,6 @@
 <hello name="{{ name }}"></hello>
-<p>
-  Start editing to see some magic happen :)
-</p>
+<p>Start editing to see some magic happen :)</p>
+
+<div *ngFor="let category of categories; let i = index">
+  <button (click)="disable(category)">{{ category }}</button>
+</div>
