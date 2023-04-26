@@ -2,5 +2,5 @@
 <p>Start editing to see some magic happen :)</p>
 
 <div *ngFor="let category of categories; let i = index">
-  <button (click)="disable(category)">{{ category }}</button>
+  <button #categoryBtn (click)="disableCategoryBtn(i)">{{ category }}</button>
 </div>

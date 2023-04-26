@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ViewChildren, QueryList, ElementRef } from '@angular/core';
 
 @Component({
   selector: 'my-app',
@@ -6,10 +6,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
+  @ViewChildren('categoryBtn') categoryBtn: QueryList<ElementRef>;
+
   name = 'Angular';
   categories = ['JS', 'Angular', 'Python'];
 
-  disable(name: string) {
-    console.log(name);
+  disableCategoryBtn(id: number) {
+    console.log(id);
+    // this.categoryBtn.forEach((categoryBtn: ElementRef) => console.log(categoryBtn.nativeElement));
+    //console.log(this.categoryBtn[id].nativeElement);
   }
 }
