@@ -14,7 +14,7 @@ export class AppComponent {
 
   disableCategoryBtn(id: number) {
     this.enableBtns();
-    this.categoryBtn._results[id].nativeElement.disabled = true;
+    this.categoryBtn.toArray()[id].nativeElement.disabled = true;
   }
 
   enableBtns() {
